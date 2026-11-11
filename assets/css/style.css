@@ -1,0 +1,801 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0b1120;
+    color: #ffffff;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.7;
+}
+
+main {
+    min-height: 75vh;
+}
+
+.accent {
+    color: #60a5fa !important;
+}
+
+.navbar {
+    background: rgba(11, 17, 32, 0.97);
+    padding: 18px 0;
+    border-bottom: 1px solid #26334a;
+}
+
+.navbar-brand {
+    font-size: 26px;
+}
+
+.nav-link {
+    color: #d1d5db !important;
+    margin-left: 15px;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: #60a5fa !important;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 130px 0 70px;
+    background:
+        radial-gradient(circle at 85% 40%,
+        #172c52 0%, #0b1120 50%);
+}
+
+.hero h1 {
+    font-size: clamp(45px, 7vw, 75px);
+    font-weight: 800;
+    margin: 10px 0;
+}
+
+.hero h2 {
+    color: #93c5fd;
+    font-size: clamp(20px, 3vw, 28px);
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    color: #cbd5e1;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+.profile-circle {
+    width: 280px;
+    height: 280px;
+    margin: auto;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #2563eb, #9333ea);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 50px rgba(59, 130, 246, 0.3);
+}
+
+.profile-initial {
+    font-size: 120px;
+    font-weight: bold;
+}
+
+.btn-primary-custom {
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    border: none;
+    color: white;
+    padding: 11px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.btn-primary-custom:hover {
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(59, 130, 246, 0.3);
+}
+
+.section-padding {
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+.page-top {
+    padding-top: 150px;
+}
+
+.section-heading {
+    margin-bottom: 45px;
+}
+
+.section-heading h1,
+.section-heading h2 {
+    font-weight: 750;
+    margin: 10px 0;
+}
+
+.section-heading p {
+    color: #aab5c8;
+}
+
+.about-card,
+.skill-card,
+.education-card,
+.project-card,
+.contact-card {
+    background: #151f33;
+    border: 1px solid #263650;
+    border-radius: 14px;
+    padding: 25px;
+}
+
+.about-card {
+    color: #cbd5e1;
+    font-size: 17px;
+}
+
+.skill-card,
+.project-card {
+    height: 100%;
+    transition: 0.3s;
+}
+
+.skill-card:hover,
+.project-card:hover,
+.education-card:hover {
+    transform: translateY(-6px);
+    border-color: #3b82f6;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.progress {
+    height: 9px;
+    background: #26334a;
+    border-radius: 10px;
+}
+
+.progress-bar {
+    background: linear-gradient(90deg, #2563eb, #a855f7);
+    border-radius: 10px;
+}
+
+.education-card {
+    border-left: 4px solid #3b82f6;
+}
+
+.project-image {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+}
+
+.project-placeholder {
+    height: 190px;
+    background: linear-gradient(135deg, #1d4ed8, #6d28d9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.project-card p {
+    color: #b8c4d8;
+}
+
+.search-box,
+.form-control {
+    background: #101a2b;
+    border: 1px solid #334155;
+    color: white;
+    padding: 12px;
+}
+
+.form-control:focus {
+    background: #101a2b;
+    color: white;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 0.2rem rgba(59, 130, 246, 0.15);
+}
+
+.form-control::placeholder {
+    color: #94a3b8;
+}
+
+.form-label {
+    color: #dbeafe;
+}
+
+.contact-card {
+    max-width: 750px;
+    margin: auto;
+}
+
+.footer {
+    background: #070c17;
+    padding: 35px 0;
+    border-top: 1px solid #26334a;
+    color: #94a3b8;
+}
+
+.footer h5 {
+    color: white;
+}
+
+@media (max-width: 768px) {
+
+    .hero {
+        text-align: center;
+        padding-top: 150px;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .profile-circle {
+        width: 210px;
+        height: 210px;
+    }
+
+    .profile-initial {
+        font-size: 90px;
+    }
+
+    .section-padding {
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+
+    .page-top {
+        padding-top: 120px;
+    }
+
+    .nav-link {
+        margin-left: 0;
+    }
+
+}.profile-circle {
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    border-radius: 50%;
+    overflow: hidden;
+    padding: 7px;
+
+    background: linear-gradient(
+        135deg,
+        #007BA7,
+        #FF2E88
+    );
+
+    box-shadow: 0 20px 55px rgba(0, 123, 167, 0.25);
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    display: block;
+    border: 3px solid rgba(255, 255, 255, 0.15);
+} */
+ @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&display=swap');
+
+/* ============================================================
+   NOCTURNE UI  -  portfolio theme for Bootstrap 5
+   Colour balance
+     60%  Midnight Carbon  page, navbar, hero, footer
+     30%  Ivory Cream      cards, headings, body text
+     10%  Electric Azure   buttons, links, rings, progress, focus
+   Signature: the hero avatar glows like a moon on the night page.
+   ============================================================ */
+
+:root {
+    --nc-carbon:        #0d1014;
+    --nc-carbon-raised: #151a21;
+    --nc-carbon-deep:   #090b0e;
+    --nc-line:          #262d38;
+
+    --nc-ivory:         #f4efe2;
+    --nc-ivory-soft:    #d9d3c2;
+    --nc-ivory-muted:   #9a9585;
+    --nc-ink:           #1b1f26;
+    --nc-ink-soft:      #4b5260;
+
+    --nc-azure:         #1aa3ff;
+    --nc-azure-deep:    #0a84e0;
+    --nc-azure-glow:    rgba(26, 163, 255, 0.28);
+
+    --nc-font-display:  'Fraunces', Georgia, serif;
+    --nc-font-body:     'Manrope', 'Segoe UI', Arial, sans-serif;
+
+    --nc-radius:        14px;
+}
+
+/* ---------- Base ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--nc-carbon);
+    color: var(--nc-ivory);
+    font-family: var(--nc-font-body);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+main {
+    min-height: 75vh;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: var(--nc-font-display);
+    letter-spacing: -0.01em;
+}
+
+a {
+    color: var(--nc-azure);
+    text-decoration: none;
+    transition: color 0.25s;
+}
+
+a:hover {
+    color: var(--nc-ivory);
+}
+
+.accent {
+    color: var(--nc-azure) !important;
+}
+
+:focus-visible {
+    outline: 2px solid var(--nc-azure);
+    outline-offset: 3px;
+}
+
+::selection {
+    background: var(--nc-azure);
+    color: var(--nc-carbon);
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+    background: rgba(13, 16, 20, 0.94);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    padding: 18px 0;
+    border-bottom: 1px solid var(--nc-line);
+}
+
+.navbar-brand {
+    font-family: var(--nc-font-display);
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--nc-ivory) !important;
+}
+
+.nav-link {
+    color: var(--nc-ivory-soft) !important;
+    margin-left: 15px;
+    font-weight: 500;
+    padding-bottom: 4px !important;
+    border-bottom: 2px solid transparent;
+    transition: color 0.25s, border-color 0.25s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--nc-ivory) !important;
+    border-bottom-color: var(--nc-azure);
+}
+
+.navbar-toggler {
+    border: 1px solid var(--nc-line);
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.2rem var(--nc-azure-glow);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%23f4efe2' stroke-linecap='round' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* ---------- Hero ---------- */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 130px 0 70px;
+    background:
+        radial-gradient(circle at 80% 45%, rgba(26, 163, 255, 0.12) 0%, rgba(13, 16, 20, 0) 45%),
+        var(--nc-carbon);
+}
+
+.hero h1 {
+    font-size: clamp(45px, 7vw, 76px);
+    font-weight: 700;
+    line-height: 1.05;
+    margin: 10px 0;
+    color: var(--nc-ivory);
+}
+
+.hero h2 {
+    font-family: var(--nc-font-body);
+    color: var(--nc-azure);
+    font-size: clamp(20px, 3vw, 28px);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    color: var(--nc-ivory-soft);
+    max-width: 580px;
+    margin-bottom: 30px;
+}
+
+/* The moon: azure ring, soft halo, ivory edge */
+.profile-circle {
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    border-radius: 50%;
+    overflow: hidden;
+    padding: 8px;
+    background: var(--nc-azure);
+    box-shadow:
+        0 0 0 10px var(--nc-carbon-raised),
+        0 0 80px 10px var(--nc-azure-glow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    display: block;
+    border: 4px solid var(--nc-ivory);
+}
+
+/* Use instead of an image: <div class="profile-initial-wrap"><span class="profile-initial">A</span></div> */
+.profile-initial-wrap {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: var(--nc-carbon);
+    border: 4px solid var(--nc-ivory);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-initial {
+    font-family: var(--nc-font-display);
+    font-size: 120px;
+    font-weight: 700;
+    color: var(--nc-ivory);
+}
+
+/* One orchestrated moment on load: the hero text rises in */
+.hero .hero-text > * {
+    opacity: 0;
+    transform: translateY(14px);
+    animation: nc-rise 0.7s ease forwards;
+}
+
+.hero .hero-text > *:nth-child(2) { animation-delay: 0.08s; }
+.hero .hero-text > *:nth-child(3) { animation-delay: 0.16s; }
+.hero .hero-text > *:nth-child(4) { animation-delay: 0.24s; }
+.hero .hero-text > *:nth-child(5) { animation-delay: 0.32s; }
+
+@keyframes nc-rise {
+    to { opacity: 1; transform: none; }
+}
+
+/* ---------- Buttons ---------- */
+.btn-primary-custom {
+    background: var(--nc-azure);
+    border: 2px solid var(--nc-azure);
+    color: var(--nc-carbon);
+    font-weight: 700;
+    padding: 11px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    transition: background 0.25s, color 0.25s, transform 0.25s, box-shadow 0.25s;
+}
+
+.btn-primary-custom:hover {
+    background: transparent;
+    color: var(--nc-azure);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px var(--nc-azure-glow);
+}
+
+.btn-outline-custom {
+    background: transparent;
+    border: 2px solid var(--nc-ivory-muted);
+    color: var(--nc-ivory);
+    font-weight: 700;
+    padding: 11px 24px;
+    border-radius: 8px;
+    display: inline-block;
+    margin-left: 10px;
+    transition: border-color 0.25s, color 0.25s;
+}
+
+.btn-outline-custom:hover {
+    border-color: var(--nc-azure);
+    color: var(--nc-azure);
+}
+
+/* ---------- Sections ---------- */
+.section-padding {
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+.page-top {
+    padding-top: 150px;
+}
+
+.section-heading {
+    margin-bottom: 45px;
+}
+
+.section-heading h1,
+.section-heading h2 {
+    font-weight: 700;
+    margin: 10px 0;
+    color: var(--nc-ivory);
+}
+
+.section-heading p {
+    color: var(--nc-ivory-muted);
+}
+
+/* ---------- Ivory cards ---------- */
+.about-card,
+.skill-card,
+.education-card,
+.project-card,
+.contact-card {
+    background: var(--nc-ivory);
+    color: var(--nc-ink);
+    border: 1px solid var(--nc-ivory);
+    border-radius: var(--nc-radius);
+    padding: 25px;
+}
+
+.about-card h1, .about-card h2, .about-card h3, .about-card h4, .about-card h5,
+.skill-card h1, .skill-card h2, .skill-card h3, .skill-card h4, .skill-card h5,
+.education-card h1, .education-card h2, .education-card h3, .education-card h4, .education-card h5,
+.project-card h1, .project-card h2, .project-card h3, .project-card h4, .project-card h5,
+.contact-card h1, .contact-card h2, .contact-card h3, .contact-card h4, .contact-card h5 {
+    color: var(--nc-carbon);
+}
+
+.about-card {
+    font-size: 17px;
+    color: #343a45;
+}
+
+.skill-card,
+.project-card {
+    height: 100%;
+    transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+}
+
+.skill-card:hover,
+.project-card:hover,
+.education-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--nc-azure);
+    box-shadow:
+        0 14px 34px rgba(0, 0, 0, 0.45),
+        0 0 0 2px var(--nc-azure);
+}
+
+.education-card {
+    border-left: 5px solid var(--nc-azure);
+    transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+}
+
+.education-card p,
+.education-card small {
+    color: var(--nc-ink-soft);
+}
+
+/* ---------- Skills ---------- */
+.progress {
+    height: 9px;
+    background: #ddd6c3;
+    border-radius: 10px;
+    margin-top: 8px;
+}
+
+.progress-bar {
+    background: var(--nc-azure);
+    border-radius: 10px;
+}
+
+/* ---------- Projects ---------- */
+.project-card {
+    padding: 0;
+    overflow: hidden;
+}
+
+.project-card > :not(.project-image):not(.project-placeholder) {
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.project-card > :last-child {
+    margin-bottom: 25px;
+}
+
+.project-image {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    margin-bottom: 18px;
+}
+
+.project-placeholder {
+    height: 190px;
+    background: var(--nc-carbon);
+    color: var(--nc-azure);
+    border-bottom: 4px solid var(--nc-azure);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--nc-font-display);
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.project-card p {
+    color: var(--nc-ink-soft);
+}
+
+.project-card a {
+    color: var(--nc-azure-deep);
+    font-weight: 600;
+}
+
+.project-card a:hover {
+    color: var(--nc-carbon);
+}
+
+/* ---------- Forms ---------- */
+.search-box,
+.form-control {
+    background: #fbf8ef;
+    border: 1px solid #cfc8b4;
+    color: var(--nc-ink);
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.form-control:focus {
+    background: #ffffff;
+    color: var(--nc-ink);
+    border-color: var(--nc-azure);
+    box-shadow: 0 0 0 0.2rem var(--nc-azure-glow);
+}
+
+.form-control::placeholder {
+    color: #8a8472;
+}
+
+.form-label {
+    color: var(--nc-carbon);
+    font-weight: 600;
+}
+
+.contact-card {
+    max-width: 750px;
+    margin: auto;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+    background: var(--nc-carbon-deep);
+    padding: 35px 0;
+    border-top: 1px solid var(--nc-line);
+    color: var(--nc-ivory-muted);
+}
+
+.footer h5 {
+    color: var(--nc-ivory);
+}
+
+.footer a {
+    color: var(--nc-ivory-soft);
+}
+
+.footer a:hover {
+    color: var(--nc-azure);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+
+    .hero {
+        text-align: center;
+        padding-top: 150px;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .profile-circle {
+        width: 230px;
+        height: 230px;
+        margin-top: 40px;
+    }
+
+    .profile-initial {
+        font-size: 90px;
+    }
+
+    .section-padding {
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+
+    .page-top {
+        padding-top: 120px;
+    }
+
+    .nav-link {
+        margin-left: 0;
+    }
+
+    .btn-outline-custom {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    * {
+        transition: none !important;
+    }
+
+    .hero .hero-text > * {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+}
